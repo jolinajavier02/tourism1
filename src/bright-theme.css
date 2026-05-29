@@ -1,0 +1,92 @@
+/* Bright Theme Overrides for Incredible India Tourism Site */
+
+/* Global body */
+body {
+  background-color: #ffffff !important;
+  color: #222222 !important;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255,255,255,0.95) !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+/* Hero overlay light */
+.hero-overlay {
+  background: linear-gradient(to right, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.8) 100%),
+              linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.3) 100%);
+}
+
+.hero-location-badge {
+  color: var(--saffron) !important;
+}
+.hero-title {
+  color: #111111 !important;
+  text-shadow: none !important;
+}
+.hero-description {
+  color: #444444 !important;
+  text-shadow: none !important;
+}
+
+/* Section wrappers */
+.section-wrapper {
+  background-color: #fafafa !important;
+  color: #222222 !important;
+}
+.section-wrapper.alternate {
+  background-color: #f5f5f5 !important;
+}
+
+/* Card backgrounds */
+.experience-card,
+.destination-card,
+.tour-card,
+.food-card,
+.luxury-hotel-card,
+.carousel-card {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07) !important;
+}
+
+/* Accent hover colors keep saffron */
+.nav-link:hover,
+.nav-link.active,
+.filter-btn.active,
+.control-btn:hover,
+.hero-explore-btn:hover,
+.book-btn:hover,
+.tour-book-btn:hover {
+  color: var(--saffron) !important;
+  border-color: var(--saffron) !important;
+}
+
+/* Footer light */
+.footer {
+  background-color: #fafafa !important;
+  color: #222222 !important;
+  border-top: 1px solid #e0e0e0 !important;
+}
+.footer .footer-desc,
+.footer .footer-link a,
+.footer .legal-link a {
+  color: #555555 !important;
+}
+.footer .footer-link a:hover,
+.footer .legal-link a:hover {
+  color: var(--saffron) !important;
+}
+
+/* Force light mode even if prefers‑color‑scheme dark */
+@media (prefers-color-scheme: dark) {
+  body,
+  .section-wrapper,
+  .section-wrapper.alternate,
+  .footer {
+    background-color: #ffffff !important;
+    color: #222222 !important;
+  }
+}

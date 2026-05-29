@@ -7,15 +7,15 @@
   --teal: #0D5C75;
   --gold: #D4AF37;
   --gold-dark: #AA8417;
-  --obsidian: #080A10;
-  --obsidian-card: #121520;
-  --obsidian-light: #1A1E2F;
-  --text-primary: #FFFFFF;
-  --text-secondary: #E2E8F0;
-  --text-muted: #94A3B8;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(8, 10, 16, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --obsidian: #FFFFFF; /* background */
+  --obsidian-card: #F5F5F5; /* card bg */
+  --obsidian-light: #E0E0E0; /* lighter shades */
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #555555;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(0, 0, 0, 0.08);
   
   --sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --serif: 'Playfair Display', Georgia, serif;
@@ -122,7 +122,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  background: linear-gradient(to bottom, rgba(8, 10, 16, 0.9) 0%, rgba(8, 10, 16, 0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--glass-border);
   transition: all 0.4s ease;
@@ -130,9 +130,9 @@ body {
 
 .navbar.scrolled {
   padding: 0.8rem 4%;
-  background-color: rgba(8, 10, 16, 0.95);
-  border-bottom: 1px solid rgba(255, 111, 0, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--saffron);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 .logo-container {
@@ -300,8 +300,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(8, 10, 16, 0.85) 0%, rgba(8, 10, 16, 0.4) 50%, rgba(8, 10, 16, 0.85) 100%),
-              linear-gradient(to top, rgba(8, 10, 16, 0.95) 0%, rgba(8, 10, 16, 0) 50%, rgba(8, 10, 16, 0.3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.8) 100%),
+              linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 100%);
   z-index: 2;
 }
 
@@ -455,7 +455,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(8, 10, 16, 0.9) 0%, rgba(8, 10, 16, 0.3) 60%, rgba(8, 10, 16, 0) 100%);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%);
   padding: 1.2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -607,7 +607,7 @@ body {
 /* SECTION GLOBAL TYPOGRAPHY */
 .section-wrapper {
   padding: 8rem 6%;
-  background-color: var(--obsidian);
+  background-color: var(--obsidian-card);
   position: relative;
 }
 
@@ -675,7 +675,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(8, 10, 16, 0.95) 0%, rgba(8, 10, 16, 0.4) 60%, rgba(8, 10, 16, 0.1) 100%);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0.1) 100%);
   padding: 2.2rem 1.8rem;
   display: flex;
   flex-direction: column;
@@ -771,7 +771,7 @@ body {
   position: absolute;
   top: 1.2rem;
   left: 1.2rem;
-  background-color: rgba(8, 10, 16, 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(5px);
   color: var(--saffron);
   padding: 0.4rem 1rem;
