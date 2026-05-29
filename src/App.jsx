@@ -89,7 +89,45 @@ const slides = [
   }
 ];
 
-const mockDestinations = [
+  const districtList = [
+    'Ahilyanagar',
+    'Akola',
+    'Amravati',
+    'Beed',
+    'Bhandara',
+    'Buldhana',
+    'Chandrapur',
+    'Chh. Sambhaji Nagar',
+    'Dharashiv',
+    'Dhule',
+    'Gadchiroli',
+    'Gondia',
+    'Hingoli',
+    'Jalgaon',
+    'Jalna',
+    'Kolhapur',
+    'Latur',
+    'Madha',
+    'Mumbai City',
+    'Mumbai Suburban',
+    'Nagpur',
+    'Nanded',
+    'Nandurbar',
+    'Nashik',
+    'Palghar',
+    'Parbhani',
+    'Pune',
+    'Raigad',
+    'Ratnagiri',
+    'Sangli',
+    'Satara',
+    'Sindhudurg',
+    'Solapur',
+    'Thane',
+    'Wardha',
+    'Washim',
+    'Yavatmal'
+  ];
   { id: 1, title: 'Taj Mahal, Agra', state: 'Uttar Pradesh', region: 'North', category: 'Heritage', rating: 4.9, reviews: 45200, price: 45, img: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80', desc: 'The world\'s most famous monument of love, built in stunning white marble along the Yamuna River.' },
   { id: 2, title: 'Munnar Tea Hills', state: 'Kerala', region: 'South', category: 'Nature', rating: 4.8, reviews: 12400, price: 30, img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', desc: 'Rolling tea gardens, pristine mist, and exotic flora nestled in the Western Ghats of Southern India.' },
   { id: 3, title: 'Hampi Ruins', state: 'Karnataka', region: 'South', category: 'Heritage', rating: 4.9, reviews: 9800, price: 35, img: 'https://images.unsplash.com/photo-1600100397608-f010e42ed182?auto=format&fit=crop&w=600&q=80', desc: 'An awe-inspiring open-air museum showcasing the grand ruins of the historic Vijayanagara Empire.' },
@@ -285,8 +323,23 @@ function App() {
     }, 5000);
   };
 
+  // Destinations page data combines main destinations and Maharashtra districts
+  const districtObjects = districtList.map((name, idx) => ({
+    id: 100 + idx,
+    title: `${name}, Maharashtra`,
+    state: 'Maharashtra',
+    region: 'West',
+    category: 'District',
+    rating: 5,
+    reviews: 0,
+    price: 0,
+    img: `https://via.placeholder.com/600x400?text=${encodeURIComponent(name)}`,
+    desc: `${name} district in Maharashtra.`
+  }));
+  const allDestinations = [...mockDestinations, ...districtObjects];
+
   // Filters for destinations
-  const filteredDestinations = mockDestinations.filter(d => {
+  const filteredDestinations = allDestinations.filter(d => {
     const matchesRegion = destFilterRegion === 'All' || d.region === destFilterRegion;
     const matchesCat = destFilterCat === 'All' || d.category === destFilterCat;
     return matchesRegion && matchesCat;
